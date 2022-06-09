@@ -18,9 +18,9 @@ outputs:
     build:
       entry_points:
         - mp_time_split = mp_time_split.core:run
-      script: build_base.sh
       number: 1
       noarch: python
+    script: build_base.sh
 
     requirements:
       host:
@@ -48,15 +48,10 @@ outputs:
       noarch: generic
     requirements:
       run:
-        - {{ name }} {{ version }}
+        - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - mp_time_split
-      commands:
-        - pip check
-        - mp_time_split --help
-      requires:
-        - pip
 
 about:
   home: https://github.com/sparks-baird/mp-time-split
