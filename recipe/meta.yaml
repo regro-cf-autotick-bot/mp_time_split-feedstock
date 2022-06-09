@@ -18,7 +18,7 @@ outputs:
     build:
       entry_points:
         - mp_time_split = mp_time_split.core:run
-      script: {{ PYTHON }} -m pip install . -vv
+      script: build_base.sh
       number: 1
       noarch: python
 
