@@ -1,8 +1,9 @@
 {% set name = "mp_time_split" %}
 {% set version = "0.1.1" %}
+{% set build_num = 0 %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-meta
   version: {{ version }}
 
 source:
@@ -10,38 +11,55 @@ source:
   sha256: eeadb34809ea1e703bb451447b979ae7c5de9c45f349dd70f4050e267a5041ef
 
 build:
-  entry_points:
-    - mp_time_split = mp_time_split.core:run
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 1
-  noarch: python
-
-requirements:
-  host:
-    - pip
-    - setuptools-scm
-    - python >=3.6
-  run:
-    - matminer
-    - pymatgen
-    - scikit-learn
-
-    - python >=3.6
-    - importlib-metadata
-test:
-  imports:
-    - mp_time_split
-  commands:
-    - pip check
-    - mp_time_split --help
-  requires:
-    - pip
+  number: {{ build_num }}
 
 outputs:
-  - name: mp-time-split
+  - name: {{ name }}
+    build:
+      entry_points:
+        - mp_time_split = mp_time_split.core:run
+      script: {{ PYTHON }} -m pip install . -vv
+      number: 1
+      noarch: python
+
+    requirements:
+      host:
+        - pip
+        - setuptools-scm
+        - python >=3.6
+      run:
+        - matminer
+        - pymatgen
+        - scikit-learn
+
+        - python >=3.6
+        - importlib-metadata
+    test:
+      imports:
+        - mp_time_split
+      commands:
+        - pip check
+        - mp_time_split --help
+      requires:
+        - pip
+
+  - name: {{ name.replace("_", "-") }}
+    build:
+      noarch: generic
     requirements:
       run:
         - {{ name }} {{ version }}
+    # requirements:
+    #   run:
+    #     - {{ pin_subpackage(name, exact=True) }}
+    test:
+      imports:
+        - mp_time_split
+      commands:
+        - pip check
+        - mp_time_split --help
+      requires:
+        - pip
 
 about:
   home: https://github.com/sparks-baird/mp-time-split
