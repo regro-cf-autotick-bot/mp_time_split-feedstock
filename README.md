@@ -17,11 +17,44 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16337&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mp_time_split-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16337&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mp_time_split-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16337&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mp_time_split-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16337&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mp_time_split-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16337&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mp_time_split-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -31,7 +64,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mp_time_split-green.svg)](https://anaconda.org/conda-forge/mp_time_split) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mp_time_split.svg)](https://anaconda.org/conda-forge/mp_time_split) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mp_time_split.svg)](https://anaconda.org/conda-forge/mp_time_split) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mp_time_split.svg)](https://anaconda.org/conda-forge/mp_time_split) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mp--time--split-green.svg)](https://anaconda.org/conda-forge/mp-time-split) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mp-time-split.svg)](https://anaconda.org/conda-forge/mp-time-split) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mp-time-split.svg)](https://anaconda.org/conda-forge/mp-time-split) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mp-time-split.svg)](https://anaconda.org/conda-forge/mp-time-split) |
 
 Installing mp_time_split
 ========================
@@ -43,41 +76,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mp_time_split` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mp-time-split` can be installed with `conda`:
 
 ```
-conda install mp_time_split
-```
-
-or with `mamba`:
-
-```
-mamba install mp_time_split
-```
-
-It is possible to list all of the versions of `mp_time_split` available on your platform with `conda`:
-
-```
-conda search mp_time_split --channel conda-forge
+conda install mp-time-split
 ```
 
 or with `mamba`:
 
 ```
-mamba search mp_time_split --channel conda-forge
+mamba install mp-time-split
+```
+
+It is possible to list all of the versions of `mp-time-split` available on your platform with `conda`:
+
+```
+conda search mp-time-split --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search mp-time-split --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search mp_time_split --channel conda-forge
+mamba repoquery search mp-time-split --channel conda-forge
 
-# List packages depending on `mp_time_split`:
-mamba repoquery whoneeds mp_time_split --channel conda-forge
+# List packages depending on `mp-time-split`:
+mamba repoquery whoneeds mp-time-split --channel conda-forge
 
-# List dependencies of `mp_time_split`:
-mamba repoquery depends mp_time_split --channel conda-forge
+# List dependencies of `mp-time-split`:
+mamba repoquery depends mp-time-split --channel conda-forge
 ```
 
 
