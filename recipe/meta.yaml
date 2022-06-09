@@ -49,9 +49,6 @@ outputs:
     requirements:
       run:
         - {{ name }} {{ version }}
-    # requirements:
-    #   run:
-    #     - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - mp_time_split
