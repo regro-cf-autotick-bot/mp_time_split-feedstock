@@ -32,6 +32,7 @@ outputs:
         - pymatgen
         - scikit-learn
         - pybtex
+        - typing-extensions
         - python >=3.6
         - importlib-metadata
     test:
