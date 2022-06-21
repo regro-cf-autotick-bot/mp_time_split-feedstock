@@ -31,7 +31,7 @@ outputs:
         - matminer
         - pymatgen
         - scikit-learn
-
+        - pybtex
         - python >=3.6
         - importlib-metadata
     test:
