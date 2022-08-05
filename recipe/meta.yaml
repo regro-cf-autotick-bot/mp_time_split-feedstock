@@ -1,5 +1,5 @@
 {% set name = "mp_time_split" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 {% set build_num = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mp-time-split-{{ version }}.tar.gz
-  sha256: b31db1ab7781a2c7fc74cec335a8ce87b85bce2a4a7d88fd8a9804d4275d719f
+  sha256: efc4f29608d3470888b371dc1e999e877d08b88621945d1fe5a2f2696b19ca40
 
 build:
   number: {{ build_num }}
