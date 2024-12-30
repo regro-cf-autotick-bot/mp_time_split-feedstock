@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mp-time-split-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mp-time-split-{{ version }}.tar.gz
   sha256: efc4f29608d3470888b371dc1e999e877d08b88621945d1fe5a2f2696b19ca40
 
 build:
@@ -18,7 +18,7 @@ outputs:
     build:
       entry_points:
         - mp_time_split = mp_time_split.core:run
-      number: 0
+      number: 1
       noarch: python
     script: build_base.sh
 
@@ -26,14 +26,14 @@ outputs:
       host:
         - pip
         - setuptools-scm
-        - python >=3.6
+        - python {{ python_min }}
       run:
         - matminer
         - pymatgen
         - scikit-learn
         - pybtex
         - typing-extensions
-        - python >=3.6
+        - python >={{ python_min }}
         - importlib-metadata
     test:
       imports:
